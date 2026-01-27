@@ -1,0 +1,81 @@
+body{
+    background: #362F4F;
+    color: #004a82;
+}
+.scroll-progress {
+  height: 4px;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 9999;
+  background: linear-gradient(
+    90deg,
+    var(--accent-color),
+    var(--accent-color-light)
+  );
+}
+
+/* Light theme */
+:root {
+  --accent-color: #444;
+  --accent-color-light: #aaa;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --accent-color: #fff;
+  --accent-color-light: #888;
+}
+
+/* Scroll-to-top button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 80px;/*30px;*/
+  right: 30px;
+  padding: 10px 14px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+}
+
+/* My name animation */
+.my-name {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid currentColor;
+
+  width: 14ch;
+  animation: typingLoop 6s steps(14) infinite,
+             blink 0.7s step-end infinite;
+}
+
+@keyframes typingLoop {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 14ch; /* typing */
+  }
+  60% {
+    width: 14ch; /* pause */
+  }
+  100% {
+    width: 0; /* deleting */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
